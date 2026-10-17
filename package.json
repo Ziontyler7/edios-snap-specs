@@ -1,0 +1,20 @@
+{
+  "name": "edios-snap-specs",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Nova & Luna: Twin Starlight Hands-Free AR Desk & World Companions for Snap Spectacles (SPECS / Lens Studio 5.22+)",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-strip-types src/test/specs-self-play.ts"
+  },
+  "keywords": [
+    "snap-spectacles",
+    "specs",
+    "lens-studio",
+    "spectacles-interaction-kit",
+    "ar-companion",
+    "learn-specs"
+  ],
+  "author": "Michael Tyler (Delaware Entity #4812-EDIOS)",
+  "license": "MIT"
+}
