@@ -1,0 +1,41 @@
+studioVersion:
+  major: 5
+  minor: 22
+  patch: 0
+  build: 260401
+  type: Public
+coreVersion: 309
+clientVersion: 13.30
+updateCheckpoint: 55
+sceneId: 0a1b2c3d-4e5f-6789-abcd-ef0123456789
+viewConfig:
+  simulation:
+    device: Spectacles (2024/2026)
+    cameraFov: 46.0
+    fullFrameAspect: 1.0
+    resolutionScale: 1.0
+     viewport: SymmetricStereo
+metaInfo:
+  hints:
+    - lens_hint_hand_tracking
+    - lens_hint_world_mesh
+    - lens_hint_voice_ml
+  lensName: Nova & Luna SPECS AR Companions
+  lensDescriptors:
+    - EXPERIMENTAL_API
+    - SPECTACLES_INTERACTION_KIT
+  spectaclesConfig:
+    targetSnapOsVersion: "5.22"
+    worldQueryModule:
+      enabled: true
+      hitTestFrequencyHz: 5
+      filterSurfaceNormals: true
+      maxSurfaceTiltDeg: 15.0
+    spectaclesInteractionKit:
+      version: "0.14.0"
+      handInputDataEnabled: true
+      interactableTriggerEndBinding: true
+    entryScripts:
+      - Assets/Scripts/NovaLunaSpecsCompanion.ts
+      - Assets/Scripts/SpecsPinchFetchController.ts
+      - Assets/Scripts/SpecsWellnessCheckIn.ts

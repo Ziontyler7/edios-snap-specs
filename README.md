@@ -22,13 +22,13 @@
 
 ## 📂 Repository Structure
 
-- [`devpost/PRD.md`](file:///Users/zion/Desktop/edios-snap-specs/devpost/PRD.md) — Product Requirements Document (`plan-lens` workflow)
-- [`devpost/ARCHITECTURE.md`](file:///Users/zion/Desktop/edios-snap-specs/devpost/ARCHITECTURE.md) — Lens Studio 5.22+ Scene Hierarchy & SIK Component Architecture
-- [`devpost/SUBMISSION_CHECKLIST.md`](file:///Users/zion/Desktop/edios-snap-specs/devpost/SUBMISSION_CHECKLIST.md) — Devpost & Snap CLAD Verification Checklist
-- [`Assets/Scripts/NovaLunaSpecsCompanion.ts`](file:///Users/zion/Desktop/edios-snap-specs/Assets/Scripts/NovaLunaSpecsCompanion.ts) — Primary `@component` Twin Companion & Cozy Bed State Machine
-- [`Assets/Scripts/SpecsPinchFetchController.ts`](file:///Users/zion/Desktop/edios-snap-specs/Assets/Scripts/SpecsPinchFetchController.ts) — SIK Hand Pinch Throw & Open-Palm Delivery Engine
-- [`Assets/Scripts/SpecsWellnessCheckIn.ts`](file:///Users/zion/Desktop/edios-snap-specs/Assets/Scripts/SpecsWellnessCheckIn.ts) — Gaze-Dwell, Voice & Proactive Hydration/Stretch Check-In Engine
-- [`src/test/specs-self-play.ts`](file:///Users/zion/Desktop/edios-snap-specs/src/test/specs-self-play.ts) — Automated Unit Test Suite (`npm test`)
+- [`devpost/PRD.md`](devpost/PRD.md) — Product Requirements Document (`plan-lens` workflow)
+- [`devpost/ARCHITECTURE.md`](devpost/ARCHITECTURE.md) — Lens Studio 5.22+ Scene Hierarchy & SIK Component Architecture
+- [`devpost/SUBMISSION_CHECKLIST.md`](devpost/SUBMISSION_CHECKLIST.md) — Devpost & Snap CLAD Verification Checklist
+- [`Assets/Scripts/NovaLunaSpecsCompanion.ts`](Assets/Scripts/NovaLunaSpecsCompanion.ts) — Primary `@component` Twin Companion & Cozy Bed State Machine
+- [`Assets/Scripts/SpecsPinchFetchController.ts`](Assets/Scripts/SpecsPinchFetchController.ts) — SIK Hand Pinch Throw & Open-Palm Delivery Engine
+- [`Assets/Scripts/SpecsWellnessCheckIn.ts`](Assets/Scripts/SpecsWellnessCheckIn.ts) — Gaze-Dwell, Voice & Proactive Hydration/Stretch Check-In Engine
+- [`src/test/specs-self-play.ts`](src/test/specs-self-play.ts) — Automated Unit Test Suite (`npm test`)
 
 ---
 
@@ -37,3 +37,8 @@
 ```bash
 npm test
 ```
+
+## 🔬 Lens Studio 5.22+ `LensStudio:WorldQueryModule` 5Hz Surface-Normal Telemetry
+
+- **Project Descriptor**: [`NovaLunaSpecsCompanion.esproj`](NovaLunaSpecsCompanion.esproj) configures Lens Studio `5.22.0`, `SpectaclesInteractionKit (SIK)`, and `LensStudio:WorldQueryModule`.
+- **5Hz Surface-Normal Hit-Test (`evaluateWorldQueryHit`)**: Runs lightweight `5Hz` world-mesh raycasting (`HitTestSessionOptions.filter = true`) bound to `SIK.InteractionManager.onTriggerEnd`, validating horizontal surface tilt (`surfaceTiltDeg <= 15.0°`) before anchoring Nova & Luna's Cozy Sanctuary Beds on your physical desk (`0.45x` scale) or room floor (`1.0x` scale).

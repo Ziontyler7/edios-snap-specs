@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 /**
  * ═══════════════════════════════════════════════════════════════════════════
  * 👓✨ SNAP SPECS AR COMPANION VERIFICATION SUITE
@@ -128,6 +130,25 @@ function pass(gate: string, detail: string): void {
     "Gate S4: Proactive Agentic Hydration Check-In & Level 4 Crown",
     `Water Bowl nudge + 528Hz chime -> stretch completed + Bond Level ${companion.bondLevel} Crown unlocked`
   );
+}
+
+// Verify root Lens Studio 5.22+ project descriptor & submission files
+{
+  const repoRoot = path.resolve(import.meta.dirname, "../..");
+  for (const reqFile of [
+    "NovaLunaSpecsCompanion.esproj",
+    "LICENSE",
+    ".gitignore",
+    "README.md",
+    "devpost/PRD.md",
+    "devpost/ARCHITECTURE.md",
+    "devpost/SUBMISSION_CHECKLIST.md",
+    "devpost/DEVPOST_SUBMISSION.md",
+  ]) {
+    if (!fs.existsSync(path.join(repoRoot, reqFile))) {
+      throw new Error(`Missing required SPECS submission file: ${reqFile}`);
+    }
+  }
 }
 
 console.log(`\n⭐ ALL ${passed}/4 SNAP SPECS AR GATES PASSED!\n`);
